@@ -114,7 +114,7 @@ function ProductPage() {
             <div className="mt-8">
               <p className="text-xs uppercase tracking-[0.2em] mb-3">Shade: <span className="text-primary font-medium">{shade}</span></p>
               <div className="flex flex-wrap gap-2">
-                {product.shades.map((s) => (
+                {product.shades.map((s: { name: string; hex: string }) => (
                   <button
                     key={s.name}
                     onClick={() => setShade(s.name)}
