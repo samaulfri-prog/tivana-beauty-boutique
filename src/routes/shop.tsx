@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "Shop All — Tivana Beauty" },
-      { name: "description", content: "Browse the full Tivana edit: makeup, skincare, lipsticks, palettes and brushes." },
-      { property: "og:title", content: "Shop All — Tivana" },
-      { property: "og:description", content: "The full Tivana catalog of premium makeup and skincare." },
+      { title: "Boutique — Tivana Beauté" },
+      { name: "description", content: "Parcourez l'édit Tivana : maquillage, soins, rouges à lèvres, palettes et pinceaux." },
+      { property: "og:title", content: "Boutique — Tivana" },
+      { property: "og:description", content: "L'ensemble du catalogue Tivana de maquillage et soins premium." },
     ],
   }),
   component: Shop,
@@ -22,12 +22,12 @@ function Shop() {
   return (
     <div className="container-tivana py-12 lg:py-20">
       <div className="mb-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary/70">The Atelier</p>
-        <h1 className="mt-3 font-display text-4xl md:text-6xl tracking-tight">Shop all</h1>
-        <p className="mt-3 text-muted-foreground max-w-lg">Every piece from the Tivana house, in one place.</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-primary/70">L'Atelier</p>
+        <h1 className="mt-3 font-display text-4xl md:text-6xl tracking-tight">Toute la boutique</h1>
+        <p className="mt-3 text-muted-foreground max-w-lg">Chaque pièce de la maison Tivana, réunie ici.</p>
       </div>
       <div className="flex gap-2 overflow-x-auto pb-4 mb-8 border-b border-border">
-        {[{ name: "All", slug: "all" }, ...categories].map((c) => (
+        {[{ name: "Tout", slug: "all" }, ...categories].map((c) => (
           <button
             key={c.slug}
             onClick={() => setFilter(c.slug === "all" ? "all" : c.name.toLowerCase())}

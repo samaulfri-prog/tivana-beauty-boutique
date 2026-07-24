@@ -1,11 +1,11 @@
 import { ShieldCheck, Truck, Lock, Sparkles, BadgeCheck } from "lucide-react";
 
 const items = [
-  { icon: Sparkles, title: "Premium Quality", desc: "Formulated in Paris with clinical-grade actives." },
-  { icon: ShieldCheck, title: "Dermatologically Tested", desc: "Safety-checked, non-comedogenic, cruelty-free." },
-  { icon: Truck, title: "Fast Delivery", desc: "Complimentary express shipping over $60." },
-  { icon: Lock, title: "Secure Payment", desc: "256-bit SSL. Apple Pay, Klarna & more." },
-  { icon: BadgeCheck, title: "100% Original", desc: "Sold directly from the Tivana atelier." },
+  { icon: Sparkles, title: "Qualité Premium", desc: "Formulé à Paris avec des actifs de qualité clinique." },
+  { icon: ShieldCheck, title: "Testé Dermatologiquement", desc: "Contrôlé, non-comédogène, sans cruauté." },
+  { icon: Truck, title: "Livraison Rapide", desc: "Livraison express offerte dès 60€." },
+  { icon: Lock, title: "Paiement Sécurisé", desc: "SSL 256-bit. Apple Pay, Klarna et plus." },
+  { icon: BadgeCheck, title: "100% Authentique", desc: "Vendu directement par l'atelier Tivana." },
 ];
 
 export function WhyChoose() {
@@ -13,9 +13,9 @@ export function WhyChoose() {
     <section className="bg-secondary/40 border-y border-border">
       <div className="container-tivana py-20 lg:py-24">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">The Tivana promise</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">La promesse Tivana</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight text-balance">
-            Why choose <span className="italic font-serif text-primary">Tivana</span>
+            Pourquoi choisir <span className="italic font-serif text-primary">Tivana</span>
           </h2>
         </div>
         <div className="mt-12 grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-5">

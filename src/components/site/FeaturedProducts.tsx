@@ -11,7 +11,7 @@ export function FeaturedProducts({ title, eyebrow, list }: { title: string; eyeb
           <p className="text-xs uppercase tracking-[0.3em] text-primary/70">{eyebrow}</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight text-balance">{title}</h2>
         </div>
-        <Link to="/shop" className="gold-underline text-sm font-medium">Shop all →</Link>
+        <Link to="/shop" className="gold-underline text-sm font-medium">Tout voir →</Link>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
         {items.slice(0, 4).map((p) => (

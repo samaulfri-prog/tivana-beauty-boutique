@@ -13,7 +13,7 @@ export function CartDrawer() {
         <SheetHeader className="border-b border-border px-6 py-5">
           <SheetTitle className="font-display text-xl flex items-center gap-2">
             <ShoppingBag className="h-5 w-5 text-primary" />
-            Your Bag ({cart.length})
+            Votre panier ({cart.length})
           </SheetTitle>
         </SheetHeader>
 
@@ -23,9 +23,9 @@ export function CartDrawer() {
               <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-secondary text-primary">
                 <ShoppingBag className="h-6 w-6" />
               </div>
-              <p className="mt-4 font-display text-lg">Your bag is empty</p>
-              <p className="mt-1 text-sm text-muted-foreground">Discover the Tivana edit.</p>
-              <Button className="mt-6" onClick={() => setCartOpen(false)}>Continue shopping</Button>
+              <p className="mt-4 font-display text-lg">Votre panier est vide</p>
+              <p className="mt-1 text-sm text-muted-foreground">Découvrez l'Édit Tivana.</p>
+              <Button className="mt-6" onClick={() => setCartOpen(false)}>Continuer mes achats</Button>
             </div>
           </div>
         ) : (
@@ -38,7 +38,7 @@ export function CartDrawer() {
                     <div className="flex justify-between gap-2">
                       <div className="min-w-0">
                         <p className="font-medium truncate">{item.product.name}</p>
-                        {item.shade && <p className="text-xs text-muted-foreground">Shade: {item.shade}</p>}
+                        {item.shade && <p className="text-xs text-muted-foreground">Teinte : {item.shade}</p>}
                         <p className="text-xs text-muted-foreground">{item.product.tagline}</p>
                       </div>
                       <button onClick={() => removeFromCart(item.product.id)} className="text-muted-foreground hover:text-foreground shrink-0">
@@ -51,7 +51,7 @@ export function CartDrawer() {
                         <span className="w-8 text-center text-sm">{item.qty}</span>
                         <button onClick={() => updateQty(item.product.id, item.qty + 1)} className="p-2"><Plus className="h-3 w-3" /></button>
                       </div>
-                      <span className="font-semibold">${(item.product.price * item.qty).toFixed(2)}</span>
+                      <span className="font-semibold">{(item.product.price * item.qty).toFixed(2)}€</span>
                     </div>
                   </div>
                 </div>
@@ -60,20 +60,20 @@ export function CartDrawer() {
 
             <div className="border-t border-border px-6 py-5 space-y-3 bg-muted/30">
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Subtotal</span>
-                <span className="font-medium">${cartTotal.toFixed(2)}</span>
+                <span className="text-muted-foreground">Sous-total</span>
+                <span className="font-medium">{cartTotal.toFixed(2)}€</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Shipping</span>
-                <span className="font-medium">{shipping === 0 ? "Complimentary" : `$${shipping}`}</span>
+                <span className="text-muted-foreground">Livraison</span>
+                <span className="font-medium">{shipping === 0 ? "Offerte" : `${shipping}€`}</span>
               </div>
               <div className="flex justify-between border-t border-border pt-3 text-base">
                 <span className="font-display">Total</span>
-                <span className="font-semibold">${(cartTotal + shipping).toFixed(2)}</span>
+                <span className="font-semibold">{(cartTotal + shipping).toFixed(2)}€</span>
               </div>
-              <Button className="w-full h-12 rounded-full text-sm tracking-widest uppercase">Checkout</Button>
+              <Button className="w-full h-12 rounded-full text-sm tracking-widest uppercase">Passer commande</Button>
               <button onClick={() => setCartOpen(false)} className="w-full text-xs text-muted-foreground hover:text-foreground">
-                Continue shopping
+                Continuer mes achats
               </button>
             </div>
           </>

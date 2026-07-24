@@ -7,10 +7,10 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-muted/40">
       <div className="container-tivana py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <img src={tivanaLogo} alt="Tivana — Luxury for every woman" className="h-20 w-auto object-contain" />
+          <img src={tivanaLogo} alt="Tivana — Le luxe pour chaque femme" className="h-20 w-auto object-contain" />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground leading-relaxed">
-            An independent Parisian beauty house crafting clinical-grade skincare and couture-inspired
-            makeup. Made with intention. Worn with confidence.
+            Une maison de beauté parisienne indépendante qui crée des soins de qualité clinique
+            et un maquillage inspiré de la couture. Fait avec intention. Porté avec confiance.
           </p>
           <div className="mt-6 flex gap-3">
             {[Instagram, Facebook, Youtube, Twitter].map((Icon, i) => (
@@ -18,7 +18,7 @@ export function Footer() {
                 key={i}
                 href="#"
                 className="grid h-9 w-9 place-items-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
-                aria-label="Social"
+                aria-label="Réseau social"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -27,9 +27,9 @@ export function Footer() {
         </div>
 
         {[
-          { title: "Shop", links: ["New Arrivals", "Bestsellers", "Makeup", "Skincare", "Gift Sets"] },
-          { title: "Support", links: ["Contact", "Shipping", "Returns", "FAQ", "Track Order"] },
-          { title: "House of Tivana", links: ["Our Story", "Sustainability", "Journal", "Careers", "Press"] },
+          { title: "Boutique", links: ["Nouveautés", "Bestsellers", "Maquillage", "Soins", "Coffrets cadeaux"] },
+          { title: "Aide", links: ["Contact", "Livraison", "Retours", "FAQ", "Suivre ma commande"] },
+          { title: "Maison Tivana", links: ["Notre histoire", "Développement durable", "Journal", "Carrières", "Presse"] },
         ].map((col) => (
           <div key={col.title}>
             <p className="text-xs uppercase tracking-[0.25em] text-primary/70">{col.title}</p>
@@ -44,10 +44,10 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="container-tivana flex flex-col md:flex-row items-center justify-between gap-4 py-6 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Tivana Beauté. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Tivana Beauté. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="gold-underline">Privacy</a>
-            <a href="#" className="gold-underline">Terms</a>
+            <a href="#" className="gold-underline">Confidentialité</a>
+            <a href="#" className="gold-underline">Conditions</a>
             <a href="#" className="gold-underline">Cookies</a>
           </div>
         </div>
