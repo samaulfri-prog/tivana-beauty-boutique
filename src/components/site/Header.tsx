@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useStore } from "@/lib/store";
 import { categories } from "@/lib/products";
 import { cn } from "@/lib/utils";
+import tivanaLogo from "@/assets/tivana-logo.png";
 
 const nav = [
   { label: "New", to: "/shop", search: { cat: "new" } },
@@ -37,11 +38,12 @@ export function Header() {
           <Menu className="h-5 w-5" />
         </button>
 
-        <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-primary">
-            Tivana
-          </span>
-          <span className="hidden md:inline text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Paris</span>
+        <Link to="/" className="flex items-center shrink-0" aria-label="Tivana home">
+          <img
+            src={tivanaLogo}
+            alt="Tivana — Luxury for every woman"
+            className="h-10 md:h-14 w-auto object-contain"
+          />
         </Link>
 
         <nav
@@ -153,7 +155,7 @@ export function Header() {
           )}
         >
           <div className="flex items-center justify-between">
-            <span className="font-display text-2xl text-primary">Tivana</span>
+            <img src={tivanaLogo} alt="Tivana" className="h-10 w-auto object-contain" />
             <button onClick={() => setMobileOpen(false)} aria-label="Close"><X className="h-5 w-5" /></button>
           </div>
           <nav className="mt-8 space-y-1">
