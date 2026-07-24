@@ -38,11 +38,12 @@ export function Header() {
           <Menu className="h-5 w-5" />
         </button>
 
-        <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-primary">
-            Tivana
-          </span>
-          <span className="hidden md:inline text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Paris</span>
+        <Link to="/" className="flex items-center shrink-0" aria-label="Tivana home">
+          <img
+            src={tivanaLogo}
+            alt="Tivana — Luxury for every woman"
+            className="h-10 md:h-14 w-auto object-contain"
+          />
         </Link>
 
         <nav
