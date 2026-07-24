@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import tivanaLogo from "@/assets/tivana-logo.png";
 
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-border bg-muted/40">
       <div className="container-tivana py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <span className="font-display text-3xl font-semibold text-primary">Tivana</span>
+          <img src={tivanaLogo} alt="Tivana — Luxury for every woman" className="h-20 w-auto object-contain" />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground leading-relaxed">
             An independent Parisian beauty house crafting clinical-grade skincare and couture-inspired
             makeup. Made with intention. Worn with confidence.
