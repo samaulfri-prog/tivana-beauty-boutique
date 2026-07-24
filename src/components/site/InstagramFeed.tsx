@@ -14,9 +14,9 @@ export function InstagramFeed() {
       <div className="text-center max-w-xl mx-auto">
         <p className="text-xs uppercase tracking-[0.3em] text-primary/70">@tivanabeaute</p>
         <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight">
-          Follow the <span className="italic font-serif text-primary">house</span>
+          Suivez la <span className="italic font-serif text-primary">maison</span>
         </h2>
-        <p className="mt-4 text-sm text-muted-foreground">Tag #TivanaMoment for a chance to be featured.</p>
+        <p className="mt-4 text-sm text-muted-foreground">Taguez #TivanaMoment pour être mise à l'honneur.</p>
       </div>
       <div className="mt-10 grid grid-cols-3 md:grid-cols-6 gap-1.5 md:gap-3">
         {feed.map((src, i) => (

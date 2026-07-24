@@ -7,12 +7,12 @@ export function CategoriesSection() {
     <section className="container-tivana py-20 lg:py-28">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">Shop by category</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">Parcourir par catégorie</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight text-balance">
-            Every ritual, <span className="italic font-serif text-primary">curated</span>.
+            Chaque rituel, <span className="italic font-serif text-primary">sublimé</span>.
           </h2>
         </div>
-        <Link to="/shop" className="gold-underline text-sm font-medium">View all categories →</Link>
+        <Link to="/shop" className="gold-underline text-sm font-medium">Voir toutes les catégories →</Link>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">

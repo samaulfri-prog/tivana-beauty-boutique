@@ -21,16 +21,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl text-primary">404</h1>
-        <h2 className="mt-4 text-xl font-semibold">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold">Page introuvable</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          La page que vous cherchez n'existe pas ou a été déplacée.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground uppercase tracking-widest hover:bg-primary/90"
           >
-            Back home
+            Retour à l'accueil
           </Link>
         </div>
       </div>
@@ -48,20 +48,20 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-display text-xl">This page didn't load</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Try refreshing or head back home.</p>
+        <h1 className="font-display text-xl">Cette page n'a pas pu se charger</h1>
+        <p className="mt-2 text-sm text-muted-foreground">Réessayez ou revenez à l'accueil.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => { router.invalidate(); reset(); }}
             className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground uppercase tracking-widest hover:bg-primary/90"
           >
-            Try again
+            Réessayer
           </button>
           <a
             href="/"
             className="rounded-full border border-input bg-background px-6 py-3 text-sm font-medium uppercase tracking-widest hover:bg-accent hover:text-accent-foreground"
           >
-            Go home
+            Accueil
           </a>
         </div>
       </div>
@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <HeadContent />
       </head>

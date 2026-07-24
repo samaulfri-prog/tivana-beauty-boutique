@@ -30,13 +30,13 @@ export function ProductCard({ product }: { product: Product }) {
         {/* Badges */}
         <div className="absolute left-3 top-3 flex flex-col gap-1.5">
           {product.badge === "new" && (
-            <span className="rounded-full bg-background/90 backdrop-blur px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-primary">New</span>
+            <span className="rounded-full bg-background/90 backdrop-blur px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-primary">Nouveau</span>
           )}
           {product.badge === "bestseller" && (
             <span className="rounded-full bg-primary px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-primary-foreground">Bestseller</span>
           )}
           {product.badge === "limited" && (
-            <span className="rounded-full bg-accent px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">Limited</span>
+            <span className="rounded-full bg-accent px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">Édition limitée</span>
           )}
           {discount > 0 && (
             <span className="rounded-full bg-foreground text-background px-2.5 py-1 text-[10px] font-semibold">
@@ -49,7 +49,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="absolute right-3 top-3 flex flex-col gap-2 opacity-0 translate-x-2 transition group-hover:opacity-100 group-hover:translate-x-0">
           <button
             onClick={() => toggleWishlist(product.id)}
-            aria-label="Wishlist"
+            aria-label="Liste d'envies"
             className={cn(
               "grid h-9 w-9 place-items-center rounded-full bg-background/90 backdrop-blur shadow-sm hover:bg-background",
               wished && "text-primary"
@@ -60,7 +60,7 @@ export function ProductCard({ product }: { product: Product }) {
           <Link
             to="/products/$id"
             params={{ id: product.id }}
-            aria-label="Quick view"
+            aria-label="Aperçu rapide"
             className="grid h-9 w-9 place-items-center rounded-full bg-background/90 backdrop-blur shadow-sm hover:bg-background"
           >
             <Eye className="h-4 w-4" />
@@ -72,7 +72,7 @@ export function ProductCard({ product }: { product: Product }) {
           onClick={() => addToCart(product)}
           className="absolute inset-x-3 bottom-3 flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground py-2.5 text-sm font-medium opacity-0 translate-y-2 transition group-hover:opacity-100 group-hover:translate-y-0 hover:bg-primary/90"
         >
-          <ShoppingBag className="h-4 w-4" /> Add to Bag
+          <ShoppingBag className="h-4 w-4" /> Ajouter au panier
         </button>
       </div>
 
@@ -80,16 +80,16 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center gap-1 text-xs text-muted-foreground">
           <Star className="h-3 w-3 fill-accent text-accent" />
           <span className="font-medium text-foreground">{product.rating}</span>
-          <span>· {product.reviews.toLocaleString()}</span>
+          <span>· {product.reviews.toLocaleString("fr-FR")}</span>
         </div>
         <Link to="/products/$id" params={{ id: product.id }}>
           <h3 className="font-display text-base font-medium">{product.name}</h3>
         </Link>
         <p className="text-xs text-muted-foreground">{product.tagline}</p>
         <div className="flex items-baseline gap-2 pt-1">
-          <span className="font-semibold">${product.price}</span>
+          <span className="font-semibold">{product.price}€</span>
           {product.compareAt && (
-            <span className="text-xs text-muted-foreground line-through">${product.compareAt}</span>
+            <span className="text-xs text-muted-foreground line-through">{product.compareAt}€</span>
           )}
         </div>
         {product.shades && (

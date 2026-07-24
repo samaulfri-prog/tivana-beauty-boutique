@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 import tivanaLogo from "@/assets/tivana-logo.png";
 
 const nav = [
-  { label: "New", to: "/shop", search: { cat: "new" } },
-  { label: "Makeup", to: "/shop", search: { cat: "makeup" } },
-  { label: "Skincare", to: "/shop", search: { cat: "skincare" } },
-  { label: "Lipsticks", to: "/shop", search: { cat: "lipsticks" } },
-  { label: "Eyes", to: "/shop", search: { cat: "eyes" } },
-  { label: "Brushes", to: "/shop", search: { cat: "brushes" } },
+  { label: "Nouveautés", to: "/shop", search: { cat: "new" } },
+  { label: "Maquillage", to: "/shop", search: { cat: "makeup" } },
+  { label: "Soins", to: "/shop", search: { cat: "skincare" } },
+  { label: "Rouges à lèvres", to: "/shop", search: { cat: "lipsticks" } },
+  { label: "Yeux", to: "/shop", search: { cat: "eyes" } },
+  { label: "Pinceaux", to: "/shop", search: { cat: "brushes" } },
 ];
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
       {/* Announcement */}
       <div className="bg-primary text-primary-foreground text-xs">
         <div className="container-tivana flex h-8 items-center justify-center gap-6 overflow-hidden">
-          <span className="tracking-[0.25em] uppercase">Complimentary shipping over $60 · 30-day returns</span>
+          <span className="tracking-[0.25em] uppercase">Livraison offerte dès 60€ · Retours sous 30 jours</span>
         </div>
       </div>
 
@@ -33,15 +33,15 @@ export function Header() {
         <button
           className="md:hidden -ml-2 p-2"
           onClick={() => setMobileOpen(true)}
-          aria-label="Open menu"
+          aria-label="Ouvrir le menu"
         >
           <Menu className="h-5 w-5" />
         </button>
 
-        <Link to="/" className="flex items-center shrink-0" aria-label="Tivana home">
+        <Link to="/" className="flex items-center shrink-0" aria-label="Accueil Tivana">
           <img
             src={tivanaLogo}
-            alt="Tivana — Luxury for every woman"
+            alt="Tivana — Le luxe pour chaque femme"
             className="h-10 md:h-14 w-auto object-contain"
           />
         </Link>
@@ -54,7 +54,7 @@ export function Header() {
             <Link
               key={item.label}
               to={item.to}
-              onMouseEnter={() => setMegaOpen(item.label === "Makeup")}
+              onMouseEnter={() => setMegaOpen(item.label === "Maquillage")}
               className="gold-underline py-2 text-foreground/80 hover:text-foreground"
             >
               {item.label}
@@ -67,11 +67,11 @@ export function Header() {
             <Search className="h-4 w-4 text-muted-foreground" />
             <input
               className="bg-transparent text-sm outline-none w-full placeholder:text-muted-foreground"
-              placeholder="Search lipstick, serum…"
+              placeholder="Rechercher rouge à lèvres, sérum…"
             />
           </div>
-          <button className="md:hidden p-2" aria-label="Search"><Search className="h-5 w-5" /></button>
-          <Link to="/" className="relative p-2" aria-label="Wishlist">
+          <button className="md:hidden p-2" aria-label="Rechercher"><Search className="h-5 w-5" /></button>
+          <Link to="/" className="relative p-2" aria-label="Liste d'envies">
             <Heart className="h-5 w-5" />
             {wishlist.length > 0 && (
               <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 rounded-full bg-accent px-1 text-[10px] font-bold text-accent-foreground grid place-items-center">
@@ -79,10 +79,10 @@ export function Header() {
               </span>
             )}
           </Link>
-          <Link to="/" className="hidden md:inline-flex p-2" aria-label="Account"><User className="h-5 w-5" /></Link>
+          <Link to="/" className="hidden md:inline-flex p-2" aria-label="Compte"><User className="h-5 w-5" /></Link>
           <button
             className="relative p-2"
-            aria-label="Cart"
+            aria-label="Panier"
             onClick={() => setCartOpen(true)}
           >
             <ShoppingBag className="h-5 w-5" />
@@ -104,34 +104,34 @@ export function Header() {
         >
           <div className="container-tivana grid grid-cols-4 gap-10 py-10">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Face</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Visage</p>
               <ul className="space-y-2 text-sm">
-                {["Foundation", "Concealer", "Powder", "Blush", "Highlighter"].map((x) => (
+                {["Fond de teint", "Anticernes", "Poudre", "Blush", "Enlumineur"].map((x) => (
                   <li key={x}><Link to="/shop" className="gold-underline">{x}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Lips</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Lèvres</p>
               <ul className="space-y-2 text-sm">
-                {["Satin Lipstick", "Matte Lipstick", "Lip Liner", "Lip Oil", "Lip Gloss"].map((x) => (
+                {["Rouge satiné", "Rouge mat", "Crayon lèvres", "Huile à lèvres", "Gloss"].map((x) => (
                   <li key={x}><Link to="/shop" className="gold-underline">{x}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Eyes</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Yeux</p>
               <ul className="space-y-2 text-sm">
-                {["Palettes", "Mascara", "Eyeliner", "Brow", "Lashes"].map((x) => (
+                {["Palettes", "Mascara", "Eyeliner", "Sourcils", "Faux-cils"].map((x) => (
                   <li key={x}><Link to="/shop" className="gold-underline">{x}</Link></li>
                 ))}
               </ul>
             </div>
             <div className="rounded-2xl bg-secondary p-6">
-              <p className="text-xs uppercase tracking-[0.25em] text-primary/70">Featured</p>
-              <p className="mt-2 font-display text-2xl text-primary leading-tight">The Velvet Reign Edit</p>
-              <p className="mt-2 text-sm text-primary/80">Six new plum-driven shades. Made to be worn.</p>
-              <Link to="/shop" className="mt-4 inline-block text-sm font-medium text-primary underline underline-offset-4">Discover</Link>
+              <p className="text-xs uppercase tracking-[0.25em] text-primary/70">À la une</p>
+              <p className="mt-2 font-display text-2xl text-primary leading-tight">L'Édit Velvet Reign</p>
+              <p className="mt-2 text-sm text-primary/80">Six nouvelles teintes prune. Faites pour être portées.</p>
+              <Link to="/shop" className="mt-4 inline-block text-sm font-medium text-primary underline underline-offset-4">Découvrir</Link>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ export function Header() {
         >
           <div className="flex items-center justify-between">
             <img src={tivanaLogo} alt="Tivana" className="h-10 w-auto object-contain" />
-            <button onClick={() => setMobileOpen(false)} aria-label="Close"><X className="h-5 w-5" /></button>
+            <button onClick={() => setMobileOpen(false)} aria-label="Fermer"><X className="h-5 w-5" /></button>
           </div>
           <nav className="mt-8 space-y-1">
             {categories.map((c) => (

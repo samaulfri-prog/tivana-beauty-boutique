@@ -12,10 +12,10 @@ import { products } from "@/lib/products";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tivana — Premium Beauty & Skincare from Paris" },
-      { name: "description", content: "Discover Tivana: couture-inspired makeup, clinical skincare, and shades that stay. Complimentary shipping on orders over $60." },
-      { property: "og:title", content: "Tivana — Premium Beauty & Skincare" },
-      { property: "og:description", content: "Couture-inspired makeup and clinical skincare from the Parisian atelier of Tivana." },
+      { title: "Tivana — Beauté & Soins Premium de Paris" },
+      { name: "description", content: "Découvrez Tivana : maquillage inspiré de la couture, soins cliniques et teintes qui durent. Livraison offerte dès 60€." },
+      { property: "og:title", content: "Tivana — Beauté & Soins Premium" },
+      { property: "og:description", content: "Maquillage inspiré de la couture et soins cliniques nés dans l'atelier parisien Tivana." },
     ],
   }),
   component: Index,
@@ -27,9 +27,9 @@ function Index() {
     <div>
       <Hero />
       <CategoriesSection />
-      <FeaturedProducts eyebrow="Featured this week" title="The essentials edit" />
+      <FeaturedProducts eyebrow="À la une cette semaine" title="L'édit des essentiels" />
       <CollectionBanner />
-      <FeaturedProducts eyebrow="Bestsellers" title="Loved by millions" list={bestsellers} />
+      <FeaturedProducts eyebrow="Bestsellers" title="Adorés par des millions" list={bestsellers} />
       <WhyChoose />
       <Testimonials />
       <InstagramFeed />

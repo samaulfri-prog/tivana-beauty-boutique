@@ -13,10 +13,10 @@ export function Newsletter() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-accent">Le Journal</p>
             <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight text-balance">
-              Join the list.<br/>Get 10% off your first ritual.
+              Rejoignez-nous.<br/>-10% sur votre premier rituel.
             </h2>
             <p className="mt-4 text-sm opacity-80 max-w-md">
-              Early access to launches, private masterclasses, and love notes from our founder.
+              Accès anticipé aux lancements, masterclasses privées et mots doux de notre fondatrice.
             </p>
           </div>
           <form
@@ -31,7 +31,7 @@ export function Newsletter() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
+                  placeholder="votre@email.com"
                   className="w-full bg-transparent outline-none py-3 text-sm placeholder:text-primary-foreground/60"
                 />
               </div>
@@ -39,10 +39,10 @@ export function Newsletter() {
                 type="submit"
                 className="rounded-full bg-accent px-6 py-3 text-sm font-medium uppercase tracking-widest text-accent-foreground hover:bg-accent/90"
               >
-                {done ? "Merci ✓" : "Subscribe"}
+                {done ? "Merci ✓" : "S'inscrire"}
               </button>
             </div>
-            <p className="mt-3 text-xs opacity-70">By subscribing you agree to our Privacy Policy.</p>
+            <p className="mt-3 text-xs opacity-70">En vous inscrivant, vous acceptez notre Politique de confidentialité.</p>
           </form>
         </div>
       </div>
