@@ -155,7 +155,7 @@ export function Header() {
           )}
         >
           <div className="flex items-center justify-between">
-            <span className="font-display text-2xl text-primary">Tivana</span>
+            <img src={tivanaLogo} alt="Tivana" className="h-10 w-auto object-contain" />
             <button onClick={() => setMobileOpen(false)} aria-label="Close"><X className="h-5 w-5" /></button>
           </div>
           <nav className="mt-8 space-y-1">
