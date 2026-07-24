@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useStore } from "@/lib/store";
 import { categories } from "@/lib/products";
 import { cn } from "@/lib/utils";
+import tivanaLogo from "@/assets/tivana-logo.png";
 
 const nav = [
   { label: "New", to: "/shop", search: { cat: "new" } },
