@@ -72,7 +72,7 @@ export const products: Product[] = [
     id: "silk-veil-foundation",
     name: "Fond de teint Silk Veil",
     tagline: "Fini seconde peau 24h",
-    price: 54,
+    price: 590,
     rating: 4.7,
     reviews: 2103,
     image: foundation,
