@@ -87,9 +87,9 @@ export function ProductCard({ product }: { product: Product }) {
         </Link>
         <p className="text-xs text-muted-foreground">{product.tagline}</p>
         <div className="flex items-baseline gap-2 pt-1">
-          <span className="font-semibold">{product.price}€</span>
+          <span className="font-semibold">{product.price} MAD</span>
           {product.compareAt && (
-            <span className="text-xs text-muted-foreground line-through">{product.compareAt}€</span>
+            <span className="text-xs text-muted-foreground line-through">{product.compareAt} MAD</span>
           )}
         </div>
         {product.shades && (

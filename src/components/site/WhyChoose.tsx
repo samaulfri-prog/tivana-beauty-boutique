@@ -3,7 +3,7 @@ import { ShieldCheck, Truck, Lock, Sparkles, BadgeCheck } from "lucide-react";
 const items = [
   { icon: Sparkles, title: "Qualité Premium", desc: "Formulé à Paris avec des actifs de qualité clinique." },
   { icon: ShieldCheck, title: "Testé Dermatologiquement", desc: "Contrôlé, non-comédogène, sans cruauté." },
-  { icon: Truck, title: "Livraison Rapide", desc: "Livraison express offerte dès 60€." },
+  { icon: Truck, title: "Livraison Rapide", desc: "Livraison express offerte dès 600 MAD." },
   { icon: Lock, title: "Paiement Sécurisé", desc: "SSL 256-bit. Apple Pay, Klarna et plus." },
   { icon: BadgeCheck, title: "100% Authentique", desc: "Vendu directement par l'atelier Tivana." },
 ];

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function CartDrawer() {
   const { cart, cartOpen, setCartOpen, removeFromCart, updateQty, cartTotal } = useStore();
-  const shipping = cartTotal > 60 || cartTotal === 0 ? 0 : 8;
+  const shipping = cartTotal > 600 || cartTotal === 0 ? 0 : 80;
 
   return (
     <Sheet open={cartOpen} onOpenChange={setCartOpen}>
@@ -51,7 +51,7 @@ export function CartDrawer() {
                         <span className="w-8 text-center text-sm">{item.qty}</span>
                         <button onClick={() => updateQty(item.product.id, item.qty + 1)} className="p-2"><Plus className="h-3 w-3" /></button>
                       </div>
-                      <span className="font-semibold">{(item.product.price * item.qty).toFixed(2)}€</span>
+                      <span className="font-semibold">{(item.product.price * item.qty).toFixed(2)} MAD</span>
                     </div>
                   </div>
                 </div>
@@ -61,15 +61,15 @@ export function CartDrawer() {
             <div className="border-t border-border px-6 py-5 space-y-3 bg-muted/30">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Sous-total</span>
-                <span className="font-medium">{cartTotal.toFixed(2)}€</span>
+                <span className="font-medium">{cartTotal.toFixed(2)} MAD</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Livraison</span>
-                <span className="font-medium">{shipping === 0 ? "Offerte" : `${shipping}€`}</span>
+                <span className="font-medium">{shipping === 0 ? "Offerte" : `${shipping} MAD`}</span>
               </div>
               <div className="flex justify-between border-t border-border pt-3 text-base">
                 <span className="font-display">Total</span>
-                <span className="font-semibold">{(cartTotal + shipping).toFixed(2)}€</span>
+                <span className="font-semibold">{(cartTotal + shipping).toFixed(2)} MAD</span>
               </div>
               <Button className="w-full h-12 rounded-full text-sm tracking-widest uppercase">Passer commande</Button>
               <button onClick={() => setCartOpen(false)} className="w-full text-xs text-muted-foreground hover:text-foreground">
