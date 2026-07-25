@@ -98,7 +98,7 @@ export const products: Product[] = [
     id: "petal-cheek-blush",
     name: "Blush crème Petal Cheek",
     tagline: "Éclat frais en apesanteur",
-    price: 36,
+    price: 390,
     rating: 4.8,
     reviews: 771,
     image: blush,
