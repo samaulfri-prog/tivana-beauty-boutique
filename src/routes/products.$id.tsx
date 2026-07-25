@@ -36,7 +36,7 @@ function ProductPage() {
   const { addToCart, toggleWishlist, wishlist } = useStore();
   const [qty, setQty] = useState(1);
   const [shade, setShade] = useState(product.shades?.[0]?.name);
-  const [gallery] = useState([product.image, product.image, product.image, product.image]);
+  const [gallery] = useState(product.gallery && product.gallery.length > 1 ? product.gallery : [product.image, product.image]);
   const [active, setActive] = useState(0);
   const wished = wishlist.includes(product.id);
   const related = products.filter((p) => p.id !== product.id).slice(0, 4);
