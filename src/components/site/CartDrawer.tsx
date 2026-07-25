@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function CartDrawer() {
   const { cart, cartOpen, setCartOpen, removeFromCart, updateQty, cartTotal } = useStore();
-  const shipping = cartTotal > 60 || cartTotal === 0 ? 0 : 8;
+  const shipping = cartTotal > 600 || cartTotal === 0 ? 0 : 80;
 
   return (
     <Sheet open={cartOpen} onOpenChange={setCartOpen}>
