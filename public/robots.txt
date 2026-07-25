@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tivana-beauty-boutique.lovable.app/sitemap.xml
