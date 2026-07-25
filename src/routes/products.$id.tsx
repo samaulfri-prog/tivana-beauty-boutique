@@ -36,7 +36,7 @@ function ProductPage() {
   const { addToCart, toggleWishlist, wishlist } = useStore();
   const [qty, setQty] = useState(1);
   const [shade, setShade] = useState(product.shades?.[0]?.name);
-  const [gallery] = useState([product.image, product.image, product.image, product.image]);
+  const gallery: string[] = product.gallery && product.gallery.length > 1 ? product.gallery : [product.image, product.image];
   const [active, setActive] = useState(0);
   const wished = wishlist.includes(product.id);
   const related = products.filter((p) => p.id !== product.id).slice(0, 4);
@@ -58,7 +58,7 @@ function ProductPage() {
                 key={i}
                 onClick={() => setActive(i)}
                 className={cn(
-                  "aspect-square rounded-lg overflow-hidden bg-muted border-2 transition",
+                  "aspect-square rounded-lg overflow-hidden bg-[hsl(36_35%_94%)] border-2 transition",
                   active === i ? "border-primary" : "border-transparent"
                 )}
               >
@@ -66,7 +66,7 @@ function ProductPage() {
               </button>
             ))}
           </div>
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-secondary group order-2">
+          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[hsl(36_35%_94%)] group order-2">
             <img
               src={gallery[active]}
               alt={product.name}

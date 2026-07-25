@@ -1,9 +1,11 @@
-import lipstick from "@/assets/product-lipstick.jpg";
-import serum from "@/assets/product-serum.jpg";
-import palette from "@/assets/product-palette.jpg";
-import foundation from "@/assets/product-foundation.jpg";
-import brushes from "@/assets/product-brushes.jpg";
-import blush from "@/assets/product-blush.jpg";
+import shampoing from "@/assets/shampoing-soin.jpeg.asset.json";
+import shampoingBottle from "@/assets/shampoing-bottle.jpeg.asset.json";
+import masque from "@/assets/masque-hydratant.jpeg.asset.json";
+import masqueTrio from "@/assets/masque-hydratant-trio.jpeg.asset.json";
+import serum from "@/assets/serum-anti-chute.jpeg.asset.json";
+import elixir from "@/assets/elixir-capillaire.jpeg.asset.json";
+import boost from "@/assets/boost-intime.jpeg.asset.json";
+import gamme from "@/assets/gamme-cheveux.jpeg.asset.json";
 
 export type Product = {
   id: string;
@@ -14,6 +16,7 @@ export type Product = {
   rating: number;
   reviews: number;
   image: string;
+  gallery?: string[];
   category: string;
   shades?: { name: string; hex: string }[];
   badge?: "new" | "bestseller" | "limited";
@@ -22,102 +25,94 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "velvet-plum-lipstick",
-    name: "Rouge à lèvres Velvet Reign",
-    tagline: "Satin-mat, tenue 12h",
-    price: 350,
-    compareAt: 460,
+    id: "shampoing-soin",
+    name: "Shampoing Soin",
+    tagline: "Hydratant & fortifiant · Kératine",
+    price: 180,
+    compareAt: 230,
     rating: 4.9,
-    reviews: 1284,
-    image: lipstick,
-    category: "Rouges à lèvres",
+    reviews: 842,
+    image: shampoing.url,
+    gallery: [shampoing.url, shampoingBottle.url],
+    category: "Cheveux",
     badge: "bestseller",
-    shades: [
-      { name: "Prune Noir", hex: "#5a1f4f" },
-      { name: "Rose Braise", hex: "#a24a5a" },
-      { name: "Nude Soie", hex: "#c68a7a" },
-      { name: "Rubis", hex: "#8a1a2b" },
-    ],
     description:
-      "Une formule satin-mat en apesanteur, enrichie en peptides hydratants. Une couleur pleine couverture qui se porte comme la soie jusqu'à 12 heures.",
+      "Shampoing doux sans sulfates, enrichi en protéines de kératine et extraits naturels. Nettoie en douceur, hydrate intensément et révèle une chevelure plus saine, souple et brillante.",
   },
   {
-    id: "rose-glow-serum",
-    name: "Sérum Rose Glow Radiance",
-    tagline: "Vitamine C · Acide hyaluronique",
-    price: 750,
-    rating: 4.8,
-    reviews: 942,
-    image: serum,
-    category: "Soins",
-    badge: "new",
-    description:
-      "Un sérum ultra-léger à la vitamine C 12% et à l'huile de rose de Bulgarie pour éclaircir, repulper et unifier le teint en 14 jours.",
-  },
-  {
-    id: "obsidian-eyes-palette",
-    name: "Palette Yeux Obsidian",
-    tagline: "9 teintes luxueuses",
-    price: 640,
-    compareAt: 790,
+    id: "masque-hydratant",
+    name: "Masque Hydratant",
+    tagline: "Aloe Vera & beurre de karité",
+    price: 220,
     rating: 4.9,
     reviews: 613,
-    image: palette,
-    category: "Yeux",
-    badge: "limited",
-    description:
-      "Neuf teintes ultra-pigmentées — du champagne délicat au prune profond — dans un écrin doré miroir. Onctueuses, fondues et longue tenue.",
-  },
-  {
-    id: "silk-veil-foundation",
-    name: "Fond de teint Silk Veil",
-    tagline: "Fini seconde peau 24h",
-    price: 590,
-    rating: 4.7,
-    reviews: 2103,
-    image: foundation,
-    category: "Visage",
-    description:
-      "Un fond de teint seconde peau à couvrance modulable et fini lumineux naturel. 40 teintes inclusives, testé dermatologiquement.",
-  },
-  {
-    id: "atelier-brush-set",
-    name: "Set de pinceaux Atelier",
-    tagline: "5 pièces en or rose",
-    price: 1050,
-    compareAt: 1400,
-    rating: 5.0,
-    reviews: 388,
-    image: brushes,
-    category: "Pinceaux",
-    badge: "bestseller",
-    description:
-      "Poils végans travaillés à la main, montés sur des manches en or rose poli. Des outils de précision pour le visage, les yeux et les finitions.",
-  },
-  {
-    id: "petal-cheek-blush",
-    name: "Blush crème Petal Cheek",
-    tagline: "Éclat frais en apesanteur",
-    price: 390,
-    rating: 4.8,
-    reviews: 771,
-    image: blush,
-    category: "Visage",
+    image: masque.url,
+    gallery: [masque.url, masqueTrio.url],
+    category: "Cheveux",
     badge: "new",
     description:
-      "Un blush crème soyeux qui fond dans la peau pour un éclat frais illuminé de l'intérieur. Six teintes inspirées des pétales.",
+      "Un masque riche à l'Aloe Vera et au beurre de karité qui hydrate, nourrit et apaise. Formule naturelle pour tous types de cheveux — hydratation intense en 10 minutes.",
+  },
+  {
+    id: "serum-anti-chute",
+    name: "Sérum Anti-Chute",
+    tagline: "Renforce & revitalise à la racine",
+    price: 320,
+    compareAt: 390,
+    rating: 4.8,
+    reviews: 1284,
+    image: serum.url,
+    category: "Cheveux",
+    badge: "bestseller",
+    description:
+      "Formulé avec des actifs naturels soigneusement sélectionnés pour renforcer la fibre capillaire, stimuler la croissance et réduire visiblement la chute des cheveux. Résultat : des cheveux plus forts, plus épais et visiblement revitalisés.",
+  },
+  {
+    id: "elixir-capillaire",
+    name: "Élixir Capillaire",
+    tagline: "Huile précieuse · 100% végétale",
+    price: 280,
+    rating: 4.9,
+    reviews: 502,
+    image: elixir.url,
+    category: "Cheveux",
+    description:
+      "Élixir naturel à base d'huiles végétales précieuses qui nourrit intensément, répare et fortifie la fibre capillaire. Apporte brillance, souplesse et protège des agressions extérieures.",
+  },
+  {
+    id: "boost-intime",
+    name: "Boost Intime",
+    tagline: "Fenugrec, Maca & Gatilier · 30 gélules",
+    price: 350,
+    rating: 4.7,
+    reviews: 388,
+    image: boost.url,
+    category: "Compléments",
+    badge: "new",
+    description:
+      "Complément alimentaire à base de Fenugrec, Maca et Gatilier. Soutient l'équilibre hormonal, le tonus et le bien-être intime au quotidien.",
+  },
+  {
+    id: "gamme-cheveux",
+    name: "Coffret Gamme Cheveux",
+    tagline: "Rituel capillaire complet",
+    price: 850,
+    compareAt: 1100,
+    rating: 5.0,
+    reviews: 216,
+    image: gamme.url,
+    category: "Coffrets",
+    badge: "limited",
+    description:
+      "Le rituel Tivana au complet : Shampoing Soin, Masque Hydratant, Sérum Anti-Chute et Élixir Capillaire. Naturel, efficace, luxueux — pour des cheveux sublimés.",
   },
 ];
 
 export const getProduct = (id: string) => products.find((p) => p.id === id);
 
 export const categories = [
-  { name: "Maquillage", slug: "makeup", image: lipstick },
-  { name: "Soins", slug: "skincare", image: serum },
-  { name: "Rouges à lèvres", slug: "lipsticks", image: lipstick },
-  { name: "Yeux", slug: "eyes", image: palette },
-  { name: "Visage", slug: "face", image: foundation },
-  { name: "Pinceaux", slug: "brushes", image: brushes },
-  { name: "Accessoires", slug: "accessories", image: blush },
-  { name: "Nouveautés", slug: "new", image: serum },
+  { name: "Cheveux", slug: "cheveux", image: shampoing.url },
+  { name: "Compléments", slug: "complements", image: boost.url },
+  { name: "Coffrets", slug: "coffrets", image: gamme.url },
+  { name: "Nouveautés", slug: "nouveautes", image: elixir.url },
 ];

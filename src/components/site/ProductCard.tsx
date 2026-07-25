@@ -13,7 +13,7 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="group relative">
-      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[hsl(36_35%_94%)]">
         <Link
           to="/products/$id"
           params={{ id: product.id }}
