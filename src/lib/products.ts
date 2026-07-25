@@ -112,8 +112,6 @@ export const getProduct = (id: string) => products.find((p) => p.id === id);
 
 export const categories = [
   { name: "Cheveux", slug: "cheveux", image: shampoing.url },
-  { name: "Soins", slug: "soins", image: masque.url },
-  { name: "Sérums", slug: "serums", image: serum.url },
   { name: "Compléments", slug: "complements", image: boost.url },
   { name: "Coffrets", slug: "coffrets", image: gamme.url },
   { name: "Nouveautés", slug: "nouveautes", image: elixir.url },
