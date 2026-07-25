@@ -97,12 +97,12 @@ function ProductPage() {
           </div>
 
           <div className="mt-6 flex items-baseline gap-3">
-            <span className="font-display text-3xl text-primary">{product.price}€</span>
+            <span className="font-display text-3xl text-primary">{product.price} MAD</span>
             {product.compareAt && (
               <>
-                <span className="text-muted-foreground line-through">{product.compareAt}€</span>
+                <span className="text-muted-foreground line-through">{product.compareAt} MAD</span>
                 <span className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold text-accent-foreground uppercase tracking-widest">
-                  Économisez {product.compareAt - product.price}€
+                  Économisez {product.compareAt - product.price} MAD
                 </span>
               </>
             )}
@@ -156,7 +156,7 @@ function ProductPage() {
 
           <div className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6">
             {[
-              { icon: Truck, label: "Livraison offerte dès 60€" },
+              { icon: Truck, label: "Livraison offerte dès 600 MAD" },
               { icon: RotateCcw, label: "Retours sous 30 jours" },
               { icon: Shield, label: "Testé dermatologiquement" },
               { icon: Sparkles, label: "Sans cruauté" },

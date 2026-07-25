@@ -62,7 +62,7 @@ export function Hero() {
                 <p className="text-[10px] uppercase tracking-[0.25em] opacity-80">Collection 01</p>
                 <p className="font-display text-2xl">Velvet Reign</p>
               </div>
-              <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">32€</span>
+              <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">350 MAD</span>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export function Hero() {
           </div>
           <div className="hidden md:block absolute -right-4 bottom-10 rounded-2xl bg-background/90 backdrop-blur border border-border p-4 shadow-xl animate-floaty" style={{ animationDelay: "1.5s" }}>
             <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Tendance</p>
-            <p className="mt-1 font-display text-sm">Sérum Rose Glow · 68€</p>
+            <p className="mt-1 font-display text-sm">Sérum Rose Glow · 750 MAD</p>
           </div>
         </div>
       </div>
