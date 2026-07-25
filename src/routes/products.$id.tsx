@@ -57,6 +57,7 @@ function ProductPage() {
               <button
                 key={i}
                 onClick={() => setActive(i)}
+                aria-label={`Voir l'image ${i + 1} de la galerie`}
                 className={cn(
                   "aspect-square rounded-lg overflow-hidden bg-[hsl(36_35%_94%)] border-2 transition",
                   active === i ? "border-primary" : "border-transparent"
@@ -65,6 +66,7 @@ function ProductPage() {
                 <img src={g} alt="" className="h-full w-full object-cover" />
               </button>
             ))}
+
           </div>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[hsl(36_35%_94%)] group order-2">
             <img

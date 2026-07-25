@@ -1,0 +1,17 @@
+# Tivana Beauté
+
+> Maison de beauté parisienne : soins capillaires, compléments et coffrets premium livrés au Maroc.
+
+## Pages
+
+- [Accueil](/): Présentation de la marque, catégories et produits phares.
+- [Boutique](/shop): Catalogue complet avec filtres par catégorie.
+
+## Produits
+
+- [Shampoing Soin](/products/shampoing-soin): Shampoing doux à l'aloe vera.
+- [Masque Hydratant](/products/masque-hydratant): Masque capillaire nourrissant.
+- [Sérum Anti-Chute](/products/serum-anti-chute): Sérum fortifiant pour cheveux.
+- [Élixir Capillaire](/products/elixir-capillaire): Huile précieuse à l'olive.
+- [Boost Intime](/products/boost-intime): Complément alimentaire en gélules.
+- [Coffret Gamme Cheveux](/products/gamme-cheveux): Routine capillaire complète.

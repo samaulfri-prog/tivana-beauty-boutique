@@ -13,17 +13,23 @@ export function Footer() {
             et un maquillage inspiré de la couture. Fait avec intention. Porté avec confiance.
           </p>
           <div className="mt-6 flex gap-3">
-            {[Instagram, Facebook, Youtube, Twitter].map((Icon, i) => (
+            {[
+              { Icon: Instagram, label: "Suivez-nous sur Instagram" },
+              { Icon: Facebook, label: "Suivez-nous sur Facebook" },
+              { Icon: Youtube, label: "Suivez-nous sur YouTube" },
+              { Icon: Twitter, label: "Suivez-nous sur Twitter" },
+            ].map(({ Icon, label }) => (
               <a
-                key={i}
+                key={label}
                 href="#"
                 className="grid h-9 w-9 place-items-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
-                aria-label="Réseau social"
+                aria-label={label}
               >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>
+
         </div>
 
         {[
