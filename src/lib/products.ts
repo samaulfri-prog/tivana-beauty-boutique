@@ -45,7 +45,7 @@ export const products: Product[] = [
     id: "rose-glow-serum",
     name: "Sérum Rose Glow Radiance",
     tagline: "Vitamine C · Acide hyaluronique",
-    price: 68,
+    price: 750,
     rating: 4.8,
     reviews: 942,
     image: serum,
