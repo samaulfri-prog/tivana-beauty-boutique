@@ -13,9 +13,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Tivana — Beauté & Soins Premium de Paris" },
-      { name: "description", content: "Découvrez Tivana : maquillage inspiré de la couture, soins cliniques et teintes qui durent. Livraison offerte dès 600 MAD." },
+      { name: "description", content: "Découvrez Tivana : maquillage inspiré de la couture, soins cliniques et teintes qui durent. Livraison offerte dès 200 MAD." },
       { property: "og:title", content: "Tivana — Beauté & Soins Premium de Paris" },
-      { property: "og:description", content: "Découvrez Tivana : maquillage inspiré de la couture, soins cliniques et teintes qui durent. Livraison offerte dès 600 MAD." },
+      { property: "og:description", content: "Découvrez Tivana : maquillage inspiré de la couture, soins cliniques et teintes qui durent. Livraison offerte dès 200 MAD." },
     ],
   }),
   component: Index,

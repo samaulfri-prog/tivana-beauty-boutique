@@ -25,7 +25,7 @@ export function Header() {
       {/* Announcement */}
       <div className="bg-primary text-primary-foreground text-xs">
         <div className="container-tivana flex h-8 items-center justify-center gap-6 overflow-hidden">
-          <span className="tracking-[0.25em] uppercase">Livraison offerte dès 600 MAD · Retours sous 30 jours</span>
+          <span className="tracking-[0.25em] uppercase">Livraison offerte dès 200 MAD · Retours sous 30 jours</span>
         </div>
       </div>
 

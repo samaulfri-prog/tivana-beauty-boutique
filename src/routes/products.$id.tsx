@@ -156,7 +156,7 @@ function ProductPage() {
 
           <div className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6">
             {[
-              { icon: Truck, label: "Livraison offerte dès 600 MAD" },
+              { icon: Truck, label: "Livraison offerte dès 200 MAD" },
               { icon: RotateCcw, label: "Retours sous 30 jours" },
               { icon: Shield, label: "Testé dermatologiquement" },
               { icon: Sparkles, label: "Sans cruauté" },
