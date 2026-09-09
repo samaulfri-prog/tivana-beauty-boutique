@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Heart, Minus, Plus, ShoppingBag, Star, Truck, Shield, RotateCcw, Sparkles } from "lucide-react";
 import { useStore } from "@/lib/store";
 import { ProductCard } from "@/components/site/ProductCard";
+import { Product360 } from "@/components/site/Product360";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/products/$id")({
@@ -36,8 +37,12 @@ function ProductPage() {
   const { addToCart, toggleWishlist, wishlist } = useStore();
   const [qty, setQty] = useState(1);
   const [shade, setShade] = useState(product.shades?.[0]?.name);
-  const gallery: string[] = product.gallery && product.gallery.length > 1 ? product.gallery : [product.image, product.image];
-  const [active, setActive] = useState(0);
+  const frames: string[] = product.frames360?.length
+    ? product.frames360
+    : product.gallery?.length
+      ? product.gallery
+      : [product.image];
+
   const wished = wishlist.includes(product.id);
   const related = products.filter((p) => p.id !== product.id).slice(0, 4);
 
@@ -50,37 +55,23 @@ function ProductPage() {
       </div>
 
       <div className="container-tivana grid lg:grid-cols-2 gap-10 lg:gap-16 pb-16">
-        {/* Gallery */}
-        <div className="grid grid-cols-[80px_1fr] gap-4">
-          <div className="flex flex-col gap-3 order-1">
-            {gallery.map((g, i) => (
-              <button
-                key={i}
-                onClick={() => setActive(i)}
-                aria-label={`Voir l'image ${i + 1} de la galerie`}
-                className={cn(
-                  "aspect-square rounded-lg overflow-hidden bg-[hsl(36_35%_94%)] border-2 transition",
-                  active === i ? "border-primary" : "border-transparent"
-                )}
-              >
-                <img src={g} alt="" className="h-full w-full object-cover" />
-              </button>
-            ))}
-
-          </div>
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[hsl(36_35%_94%)] group order-2">
-            <img
-              src={gallery[active]}
-              alt={product.name}
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            {product.badge && (
-              <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-primary-foreground">
-                {product.badge === "new" ? "Nouveau" : product.badge === "bestseller" ? "Bestseller" : "Édition limitée"}
-              </span>
-            )}
-          </div>
+        {/* Galerie 360° */}
+        <div>
+          <Product360 frames={frames} alt={product.name} />
+          {frames.length > 1 && (
+            <div className="mt-4 flex gap-3">
+              {frames.map((g, i) => (
+                <div
+                  key={i}
+                  className="h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-[hsl(36_35%_94%)]"
+                >
+                  <img src={g} alt="" className="h-full w-full object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
+
 
         {/* Details */}
         <div className="lg:sticky lg:top-28 self-start">
