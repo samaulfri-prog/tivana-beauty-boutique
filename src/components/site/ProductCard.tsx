@@ -43,7 +43,13 @@ export function ProductCard({ product }: { product: Product }) {
               -{discount}%
             </span>
           )}
+          {(product.frames360?.length ?? 0) > 1 && (
+            <span className="rounded-full bg-background/90 backdrop-blur px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-foreground/70">
+              360°
+            </span>
+          )}
         </div>
+
 
         {/* Quick actions */}
         <div className="absolute right-3 top-3 flex flex-col gap-2 opacity-0 translate-x-2 transition group-hover:opacity-100 group-hover:translate-x-0">
