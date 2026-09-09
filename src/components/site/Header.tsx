@@ -8,11 +8,12 @@ import tivanaLogo from "@/assets/tivana-logo.png";
 
 const nav = [
   { label: "Nouveautés", to: "/shop", search: { cat: "new" } },
-  { label: "Maquillage", to: "/shop", search: { cat: "makeup" } },
-  { label: "Soins", to: "/shop", search: { cat: "skincare" } },
-  { label: "Rouges à lèvres", to: "/shop", search: { cat: "lipsticks" } },
-  { label: "Yeux", to: "/shop", search: { cat: "eyes" } },
-  { label: "Pinceaux", to: "/shop", search: { cat: "brushes" } },
+  { label: "Cheveux", to: "/shop", search: { cat: "cheveux" } },
+  { label: "Visage", to: "/shop", search: { cat: "visage" } },
+  { label: "Intime", to: "/shop", search: { cat: "intime" } },
+  { label: "Compléments", to: "/shop", search: { cat: "complements" } },
+  { label: "Coffrets", to: "/shop", search: { cat: "coffrets" } },
+
 ];
 
 export function Header() {
