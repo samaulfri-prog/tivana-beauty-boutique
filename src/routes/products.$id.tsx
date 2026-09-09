@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Heart, Minus, Plus, ShoppingBag, Star, Truck, Shield, RotateCcw, Sparkles } from "lucide-react";
 import { useStore } from "@/lib/store";
 import { ProductCard } from "@/components/site/ProductCard";
+import { Product360 } from "@/components/site/Product360";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/products/$id")({
