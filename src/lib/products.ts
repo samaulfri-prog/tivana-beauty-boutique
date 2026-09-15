@@ -1,22 +1,21 @@
-import shampoing from "@/assets/shampoing-soin.jpeg.asset.json";
-import shampoingBottle from "@/assets/shampoing-bottle.jpeg.asset.json";
-import masque from "@/assets/masque-hydratant.jpeg.asset.json";
-import masqueTrio from "@/assets/masque-hydratant-trio.jpeg.asset.json";
-import serum from "@/assets/serum-anti-chute.jpeg.asset.json";
-import elixir from "@/assets/elixir-capillaire.jpeg.asset.json";
-import elixir2 from "@/assets/elixir-capillaire-2.jpeg.asset.json";
-import boost from "@/assets/boost-intime.jpeg.asset.json";
-import boostA from "@/assets/boost-360-a.jpeg.asset.json";
-import boostB from "@/assets/boost-360-b.jpeg.asset.json";
-import boostC from "@/assets/boost-360-c.jpeg.asset.json";
-import boostD from "@/assets/boost-360-d.jpeg.asset.json";
-import gamme from "@/assets/gamme-cheveux.jpeg.asset.json";
-import gamme2 from "@/assets/gamme-cheveux-2.jpeg.asset.json";
-import gammeVisage from "@/assets/gamme-visage.jpeg.asset.json";
-import gelNettoyant from "@/assets/gel-nettoyant-visage.jpeg.asset.json";
-import ecranSolaire from "@/assets/ecran-solaire.jpeg.asset.json";
-import hydraLight from "@/assets/hydra-light.jpeg.asset.json";
-import gelIntima from "@/assets/gel-intima-pure.jpeg.asset.json";
+import shampoing from "@/assets/shampoing.jpg";
+import masque from "@/assets/masque.jpg";
+import serum from "@/assets/chute.jpg";
+import elixir from "@/assets/elixir.jpg";
+import elixir2 from "@/assets/elixir.jpg";
+import boost from "@/assets/boost.jpg";
+import gamme from "@/assets/gammecheveux.jpg";
+import gamme2 from "@/assets/gammecheveux.jpg";
+import gammeVisage from "@/assets/gammevisage.jpg";
+import gelNettoyant from "@/assets/nettyant.jpg";
+import ecranSolaire from "@/assets/solaire.jpg";
+import hydraLight from "@/assets/light.jpg";
+import gelIntima from "@/assets/intime.jpg";
+import catCheveux from "@/assets/categories/cheveux.jpg";
+import catVisage from "@/assets/categories/visage.jpg";
+import catIntime from "@/assets/categories/intime.jpg";
+import catComplements from "@/assets/categories/complements.jpg";
+import catCoffrets from "@/assets/categories/coffrets.jpg";
 
 export type Product = {
   id: string;
@@ -45,9 +44,9 @@ export const products: Product[] = [
     compareAt: 230,
     rating: 4.9,
     reviews: 842,
-    image: shampoing.url,
-    gallery: [shampoing.url, shampoingBottle.url],
-    frames360: [shampoing.url, shampoingBottle.url, gamme2.url],
+    image: shampoing,
+    gallery: [shampoing],
+    frames360: [shampoing],
     category: "Cheveux",
     badge: "bestseller",
     description:
@@ -60,9 +59,9 @@ export const products: Product[] = [
     price: 220,
     rating: 4.9,
     reviews: 613,
-    image: masque.url,
-    gallery: [masque.url, masqueTrio.url],
-    frames360: [masque.url, masqueTrio.url, gamme2.url],
+    image: masque,
+    gallery: [masque],
+    frames360: [masque],
     category: "Cheveux",
     badge: "new",
     description:
@@ -76,9 +75,9 @@ export const products: Product[] = [
     compareAt: 390,
     rating: 4.8,
     reviews: 1284,
-    image: serum.url,
-    gallery: [serum.url, gamme2.url],
-    frames360: [serum.url, gamme2.url, gamme.url],
+    image: serum,
+    gallery: [serum, gamme2],
+    frames360: [serum, gamme2, gamme],
     category: "Cheveux",
     badge: "bestseller",
     description:
@@ -91,9 +90,9 @@ export const products: Product[] = [
     price: 280,
     rating: 4.9,
     reviews: 502,
-    image: elixir2.url,
-    gallery: [elixir2.url, elixir.url, gamme2.url],
-    frames360: [elixir2.url, elixir.url, gamme2.url],
+    image: elixir2,
+    gallery: [elixir2, elixir, gamme2],
+    frames360: [elixir2, elixir, gamme2],
     category: "Cheveux",
     description:
       "Élixir naturel à base d'huiles d'argan, de ricin et de jojoba qui nourrit intensément, répare et fortifie la fibre capillaire. Apporte brillance, souplesse et protège des agressions extérieures.",
@@ -105,9 +104,9 @@ export const products: Product[] = [
     price: 190,
     rating: 4.8,
     reviews: 174,
-    image: gelNettoyant.url,
-    gallery: [gelNettoyant.url, gammeVisage.url],
-    frames360: [gelNettoyant.url, gammeVisage.url],
+    image: gelNettoyant,
+    gallery: [gelNettoyant, gammeVisage],
+    frames360: [gelNettoyant, gammeVisage],
     category: "Visage",
     badge: "new",
     description:
@@ -120,9 +119,9 @@ export const products: Product[] = [
     price: 250,
     rating: 4.9,
     reviews: 231,
-    image: ecranSolaire.url,
-    gallery: [ecranSolaire.url, gammeVisage.url],
-    frames360: [ecranSolaire.url, gammeVisage.url],
+    image: ecranSolaire,
+    gallery: [ecranSolaire, gammeVisage],
+    frames360: [ecranSolaire, gammeVisage],
     category: "Visage",
     badge: "new",
     description:
@@ -135,9 +134,9 @@ export const products: Product[] = [
     price: 260,
     rating: 4.8,
     reviews: 198,
-    image: hydraLight.url,
-    gallery: [hydraLight.url, gammeVisage.url],
-    frames360: [hydraLight.url, gammeVisage.url],
+    image: hydraLight,
+    gallery: [hydraLight, gammeVisage],
+    frames360: [hydraLight, gammeVisage],
     category: "Visage",
     badge: "new",
     description:
@@ -150,9 +149,9 @@ export const products: Product[] = [
     price: 190,
     rating: 4.8,
     reviews: 142,
-    image: gelIntima.url,
-    gallery: [gelIntima.url],
-    frames360: [gelIntima.url],
+    image: gelIntima,
+    gallery: [gelIntima],
+    frames360: [gelIntima],
     category: "Intime",
     badge: "new",
     description:
@@ -165,9 +164,9 @@ export const products: Product[] = [
     price: 350,
     rating: 4.7,
     reviews: 388,
-    image: boostA.url,
-    gallery: [boostA.url, boostC.url, boostB.url, boost.url],
-    frames360: [boostA.url, boostC.url, boostB.url, boost.url],
+    image: boost,
+    gallery: [boost],
+    frames360: [boost],
     category: "Compléments",
     badge: "bestseller",
     description:
@@ -181,9 +180,9 @@ export const products: Product[] = [
     compareAt: 1100,
     rating: 5.0,
     reviews: 216,
-    image: gamme2.url,
-    gallery: [gamme2.url, gamme.url],
-    frames360: [gamme2.url, gamme.url, shampoing.url, elixir2.url],
+    image: gamme2,
+    gallery: [gamme2, gamme],
+    frames360: [gamme2, gamme, shampoing, elixir2],
     category: "Coffrets",
     badge: "limited",
     description:
@@ -197,9 +196,9 @@ export const products: Product[] = [
     compareAt: 950,
     rating: 4.9,
     reviews: 87,
-    image: gammeVisage.url,
-    gallery: [gammeVisage.url, gelNettoyant.url, ecranSolaire.url, hydraLight.url],
-    frames360: [gammeVisage.url, gelNettoyant.url, ecranSolaire.url, hydraLight.url],
+    image: gammeVisage,
+    gallery: [gammeVisage, gelNettoyant, ecranSolaire, hydraLight],
+    frames360: [gammeVisage, gelNettoyant, ecranSolaire, hydraLight],
     category: "Coffrets",
     badge: "new",
     description:
@@ -210,9 +209,9 @@ export const products: Product[] = [
 export const getProduct = (id: string) => products.find((p) => p.id === id);
 
 export const categories = [
-  { name: "Cheveux", slug: "cheveux", image: gamme2.url },
-  { name: "Visage", slug: "visage", image: gammeVisage.url },
-  { name: "Intime", slug: "intime", image: gelIntima.url },
-  { name: "Compléments", slug: "complements", image: boostA.url },
-  { name: "Coffrets", slug: "coffrets", image: gamme.url },
+  { name: "Cheveux", slug: "cheveux", image: catCheveux },
+  { name: "Visage", slug: "visage", image: catVisage },
+  { name: "Intime", slug: "intime", image: catIntime },
+  { name: "Compléments", slug: "complements", image: catComplements },
+  { name: "Coffrets", slug: "coffrets", image: catCoffrets },
 ];

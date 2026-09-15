@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Heart, Minus, Plus, ShoppingBag, Star, Truck, Shield, RotateCcw, Sparkles } from "lucide-react";
 import { useStore } from "@/lib/store";
 import { ProductCard } from "@/components/site/ProductCard";
-import { Product360 } from "@/components/site/Product360";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/products/$id")({
@@ -37,12 +36,6 @@ function ProductPage() {
   const { addToCart, toggleWishlist, wishlist } = useStore();
   const [qty, setQty] = useState(1);
   const [shade, setShade] = useState(product.shades?.[0]?.name);
-  const frames: string[] = product.frames360?.length
-    ? product.frames360
-    : product.gallery?.length
-      ? product.gallery
-      : [product.image];
-
   const wished = wishlist.includes(product.id);
   const related = products.filter((p) => p.id !== product.id).slice(0, 4);
 
@@ -55,21 +48,13 @@ function ProductPage() {
       </div>
 
       <div className="container-tivana grid lg:grid-cols-2 gap-10 lg:gap-16 pb-16">
-        {/* Galerie 360° */}
-        <div>
-          <Product360 frames={frames} alt={product.name} />
-          {frames.length > 1 && (
-            <div className="mt-4 flex gap-3">
-              {frames.map((g, i) => (
-                <div
-                  key={i}
-                  className="h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-[hsl(36_35%_94%)]"
-                >
-                  <img src={g} alt="" className="h-full w-full object-cover" />
-                </div>
-              ))}
-            </div>
-          )}
+        {/* Photo principale */}
+        <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-[hsl(36_35%_94%)]">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="h-full w-full object-cover"
+          />
         </div>
 
 
