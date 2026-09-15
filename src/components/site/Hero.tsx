@@ -5,7 +5,7 @@ import hero from "@/assets/hero.jpg";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="container-tivana grid lg:grid-cols-2 gap-10 lg:gap-16 pt-10 lg:pt-16 pb-16 lg:pb-24 items-center">
+      <div className="container-tivana grid lg:grid-cols-2 gap-10 lg:gap-16  lg:pt-4 pb-16 lg:pb-24 items-center">
         <div className="relative z-10 order-2 lg:order-1">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3 py-1.5 text-xs uppercase tracking-[0.25em] text-primary">
             <Sparkles className="h-3 w-3" /> Nouveau · Édit Automne 2026
