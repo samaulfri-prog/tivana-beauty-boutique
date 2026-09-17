@@ -3,24 +3,24 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const reviews = [
   {
-    name: "Amélie R.",
-    city: "Paris",
+    name: "سلمى ب.",
+    city: "الدار البيضاء",
     quote:
-      "Le rouge Velvet Reign est le plus flatteur que j'aie porté. Il paraît couture et se pose comme un souffle sur les lèvres.",
+      "جربت الشامبوان والسيروم ديال تساقط الشعر، ومن بعد أسابيع قليلة بان ليا الفرق. شعري ولا خفيف وكيبان صحي أكثر.",
     rating: 5,
   },
   {
-    name: "Sofia M.",
-    city: "Milan",
+    name: "مريم أ.",
+    city: "الرباط",
     quote:
-      "Mon teint a changé en 3 semaines avec le sérum Rose Glow. Tivana est discrètement la maison de beauté la plus excitante du moment.",
+      "Hydra Light خفيفة بزاف على البشرة وكتخليها مرطبة بلا ما تدهن. ولات جزء أساسي من الروتين ديالي كل صباح.",
     rating: 5,
   },
   {
-    name: "Layla K.",
-    city: "Dubaï",
+    name: "هند ل.",
+    city: "مراكش",
     quote:
-      "Chaque détail — le poids doré du packaging, la palette de teintes, le service — respire le luxe sans jamais être ostentatoire.",
+      "من أول استعمال حسّيت بالجودة، التغليف زوين والمنتوجات كيوصلو بعناية. تجربة Tivana عجباتني بزاف.",
     rating: 5,
   },
 ];
@@ -32,12 +32,12 @@ export function Testimonials() {
     <section className="container-tivana py-20 lg:py-28">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">Elles en parlent</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">كلام زبوناتنا</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight text-balance">
-            Adorée par <span className="italic font-serif text-primary">1,2M</span> de femmes dans le monde.
+            تجارب حقيقية مع <span className="italic font-serif text-primary">Tivana</span>
           </h2>
           <p className="mt-5 text-muted-foreground max-w-md leading-relaxed">
-            Une moyenne de 4,9 étoiles sur 84 000 avis vérifiés. Voilà pourquoi elles reviennent.
+            زبوناتنا كيشاركو معاكم تجربتهم مع منتجات العناية ديال Tivana.
           </p>
           <div className="mt-8 flex gap-3">
             <button
@@ -58,11 +58,11 @@ export function Testimonials() {
         </div>
         <div className="relative rounded-3xl bg-secondary p-8 md:p-12 min-h-[320px]">
           <Quote className="h-10 w-10 text-primary/40" />
-          <p className="mt-6 font-display text-2xl md:text-3xl leading-snug text-primary text-balance">
+          <p dir="rtl" lang="ar-MA" className="mt-6 font-display text-2xl md:text-3xl leading-snug text-primary text-balance text-right">
             «&nbsp;{r.quote}&nbsp;»
           </p>
           <div className="mt-8 flex items-center justify-between">
-            <div>
+            <div dir="rtl" lang="ar-MA" className="text-right">
               <p className="font-medium">{r.name}</p>
               <p className="text-xs text-primary/70">{r.city}</p>
             </div>
