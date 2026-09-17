@@ -60,11 +60,11 @@ export function WhyChoose() {
                     key={cert.label}
                     className="group flex flex-col items-center gap-3"
                   >
-                    <div className="relative h-20 w-32 md:h-24 md:w-40 rounded-2xl bg-muted/40 border border-border p-3 grid place-items-center hover:border-primary/30 hover:shadow-md transition">
+                    <div className="relative h-20 w-32 md:h-24 md:w-40 rounded-2xl bg-white border border-border p-3 grid place-items-center hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition">
                       <img
                         src={cert.src}
                         alt={cert.alt}
-                        className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition duration-500"
+                        className="max-h-full max-w-full object-contain transition duration-500"
                         loading="lazy"
                       />
                     </div>
