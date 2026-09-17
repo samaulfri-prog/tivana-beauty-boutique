@@ -31,10 +31,10 @@ export function Testimonials() {
   return (
     <section className="container-tivana py-20 lg:py-28">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-primary/70">كلام زبوناتنا</p>
+        <div dir="rtl" lang="ar-MA" className="text-right">
+          <p className="text-xs tracking-[0.2em] text-primary/70">شنو قالو على Tivana</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-tight text-balance">
-            تجارب حقيقية مع <span className="italic font-serif text-primary">Tivana</span>
+            تجارب زبوناتنا مع <span className="italic font-serif text-primary">Tivana</span>
           </h2>
           <p className="mt-5 text-muted-foreground max-w-md leading-relaxed">
             زبوناتنا كيشاركو معاكم تجربتهم مع منتجات العناية ديال Tivana.
