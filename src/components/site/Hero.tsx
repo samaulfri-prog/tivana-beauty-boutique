@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
-import hero from "@/assets/hero.jpg";
+import laboratoryHero from "@/assets/laboratoire-tivana.png.asset.json";
 
 export function Hero() {
   return (
@@ -52,17 +52,17 @@ export function Hero() {
         <div className="relative order-1 lg:order-2">
           <div className="relative aspect-[4/5] max-w-[560px] mx-auto rounded-[2rem] overflow-hidden bg-secondary">
             <img
-              src={hero}
-              alt="Collection Velvet Reign de Tivana"
+              src={laboratoryHero.url}
+              alt="Laboratoire Tivana où sont développés les soins de la marque"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-primary-foreground">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] opacity-80">Collection 01</p>
-                <p className="font-display text-2xl">Velvet Reign</p>
+                <p className="text-[10px] uppercase tracking-[0.25em] opacity-80">Dans les coulisses</p>
+                <p className="font-display text-2xl">Laboratoire Tivana</p>
               </div>
-              <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">350 MAD</span>
+              <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">Expertise &amp; soin</span>
             </div>
           </div>
 

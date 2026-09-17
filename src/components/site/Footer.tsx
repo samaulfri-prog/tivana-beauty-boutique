@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import { Instagram, Facebook, MessageCircle, Music2 } from "lucide-react";
 import tivanaLogo from "@/assets/tivana-logo.png";
 
 export function Footer() {
@@ -14,14 +14,16 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: Instagram, label: "Suivez-nous sur Instagram" },
-              { Icon: Facebook, label: "Suivez-nous sur Facebook" },
-              { Icon: Youtube, label: "Suivez-nous sur YouTube" },
-              { Icon: Twitter, label: "Suivez-nous sur Twitter" },
-            ].map(({ Icon, label }) => (
+              { Icon: MessageCircle, label: "Contactez-nous sur WhatsApp", href: "https://wa.me/212708082079" },
+              { Icon: Music2, label: "Suivez-nous sur TikTok", href: "https://www.tiktok.com/@www.tivana.ma?_r=1&_t=ZS-99l8kr3V5iz" },
+              { Icon: Facebook, label: "Suivez-nous sur Facebook", href: "https://www.facebook.com/share/19YHZE4Th5/?mibextid=wwXIfr" },
+              { Icon: Instagram, label: "Suivez-nous sur Instagram", href: "https://www.instagram.com/tivana.ma?stkn=MTQ1eW5keXAybTFvdg==" },
+            ].map(({ Icon, label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noreferrer"
                 className="grid h-9 w-9 place-items-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
                 aria-label={label}
               >
