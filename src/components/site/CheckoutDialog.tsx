@@ -203,7 +203,7 @@ export function CheckoutDialog() {
             <div className="rounded-xl bg-amber-500/10 border border-amber-500/20 p-3.5 text-xs text-amber-900 dark:text-amber-200 flex items-center gap-3 text-left">
               <Clock className="h-5 w-5 shrink-0 text-amber-600" />
               <span>
-                Notre conseiller va vous contacter par téléphone ou WhatsApp dans les plus brefs délais pour valider l'expédition de votre colis.
+                Notre conseiller va vous contacter par téléphone ou WhatsApp dans les plus brefs délais pour valider l'expédition de votre colis. Merci.
               </span>
             </div>
 
@@ -214,7 +214,7 @@ export function CheckoutDialog() {
                 rel="noopener noreferrer"
                 className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 text-sm transition shadow-sm"
               >
-                <MessageCircle className="h-4 w-4" /> Ouvrir WhatsApp 
+                <MessageCircle className="h-4 w-4" /> Ouvrir WhatsApp  
               </a>
               <Button
                 variant="outline"
