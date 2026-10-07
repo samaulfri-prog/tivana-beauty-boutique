@@ -15,6 +15,7 @@ import { StoreProvider } from "@/lib/store";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CartDrawer } from "@/components/site/CartDrawer";
+import { CheckoutDialog } from "@/components/site/CheckoutDialog";
 
 function NotFoundComponent() {
   return (
@@ -130,6 +131,7 @@ function RootComponent() {
           <Footer />
         </div>
         <CartDrawer />
+        <CheckoutDialog />
       </StoreProvider>
     </QueryClientProvider>
   );

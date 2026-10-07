@@ -27,7 +27,11 @@ function Index() {
     <div>
       <Hero />
       <CategoriesSection />
-      <FeaturedProducts eyebrow="À la une cette semaine" title="L'édit des essentiels" />
+      <FeaturedProducts
+        eyebrow="À la une cette semaine"
+        title="L'édit des essentiels"
+        className="pt-4 lg:pt-6 pb-12 lg:pb-16"
+      />
       <CollectionBanner />
       <FeaturedProducts eyebrow="Bestsellers" title="Adorés par des millions" list={bestsellers} />
       <WhyChoose />

@@ -1,6 +1,6 @@
 import { ShieldCheck, Truck, Lock, Sparkles, BadgeCheck } from "lucide-react";
-import isoCert from "@/assets/iso-certification.png.asset.json";
-import onssaCert from "@/assets/onssa-certification.png.asset.json";
+import isoCert from "@/assets/iso.png";
+import onssaCert from "@/assets/onssa.png";
 
 const items = [
   { icon: Sparkles, title: "Qualité Premium", desc: "Formulé à Paris avec des actifs de qualité clinique." },
@@ -11,8 +11,8 @@ const items = [
 ];
 
 const certs = [
-  { src: isoCert.url, alt: "Certification ISO — normes internationales de qualité", label: "Certifié ISO" },
-  { src: onssaCert.url, alt: "Certification ONSSA — conformité sanitaire marocaine", label: "Agréé ONSSA" },
+  { src: isoCert, alt: "Certification ISO — normes internationales de qualité", label: "Certifié ISO" },
+  { src: onssaCert, alt: "Certification ONSSA — conformité sanitaire marocaine", label: "Agréé ONSSA" },
 ];
 
 export function WhyChoose() {
@@ -60,7 +60,7 @@ export function WhyChoose() {
                     key={cert.label}
                     className="group flex flex-col items-center gap-3"
                   >
-                    <div className="relative h-20 w-32 md:h-24 md:w-40 rounded-2xl bg-white border border-border p-3 grid place-items-center hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition">
+                    <div className="relative h-20 w-32 md:h-24 md:w-40 rounded-2xl bg-white border border-border p-3.5 md:p-4 grid place-items-center shadow-sm hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition">
                       <img
                         src={cert.src}
                         alt={cert.alt}

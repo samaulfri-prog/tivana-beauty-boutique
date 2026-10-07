@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
-import laboratoryHero from "@/assets/laboratoire-tivana.png.asset.json";
+import laboratoryHero from "@/assets/hero.jpeg";
 
 export function Hero() {
   return (
@@ -50,24 +50,27 @@ export function Hero() {
         </div>
 
         <div className="relative order-1 lg:order-2">
-          <div className="relative aspect-[4/5] max-w-[560px] mx-auto rounded-[2rem] overflow-hidden bg-secondary">
+          <div className="relative aspect-[3/2] w-full max-w-[640px] mx-auto rounded-[2rem] overflow-hidden bg-secondary shadow-2xl border border-border/40">
             <img
-              src={laboratoryHero.url}
+              src={laboratoryHero}
               alt="Laboratoire Tivana où sont développés les soins de la marque"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-primary-foreground">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-5 left-6 flex items-center gap-2.5 text-white pointer-events-none drop-shadow-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] opacity-80">Dans les coulisses</p>
-                <p className="font-display text-2xl">Laboratoire Tivana</p>
+                <p className="text-[10px] uppercase tracking-[0.25em] opacity-80 font-medium">Dans les coulisses</p>
+                <p className="font-display text-lg md:text-xl font-normal">Laboratoire Tivana</p>
               </div>
-              <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-foreground">Expertise &amp; soin</span>
             </div>
           </div>
 
           {/* Floating cards */}
-          <div className="hidden md:block absolute -left-6 top-16 rounded-2xl bg-background/90 backdrop-blur border border-border p-4 shadow-xl animate-floaty">
+          <div className="hidden md:block absolute -left-6 top-10 rounded-2xl bg-background/95 backdrop-blur border border-border p-4 shadow-xl animate-floaty">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-full bg-accent grid place-items-center text-accent-foreground font-semibold">4,9</div>
               <div>
@@ -76,9 +79,9 @@ export function Hero() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block absolute -right-4 bottom-10 rounded-2xl bg-background/90 backdrop-blur border border-border p-4 shadow-xl animate-floaty" style={{ animationDelay: "1.5s" }}>
+          <div className="hidden md:block absolute -right-4 -bottom-4 rounded-2xl bg-background/95 backdrop-blur border border-border p-4 shadow-xl animate-floaty" style={{ animationDelay: "1.5s" }}>
             <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Tendance</p>
-            <p className="mt-1 font-display text-sm">Sérum Rose Glow · 750 MAD</p>
+            <p className="mt-1 font-display text-sm font-medium">Sérum Rose Glow · 750 MAD</p>
           </div>
         </div>
       </div>

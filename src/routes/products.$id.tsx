@@ -1,7 +1,7 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getProduct, products } from "@/lib/products";
 import { useState } from "react";
-import { Heart, Minus, Plus, ShoppingBag, Star, Truck, Shield, RotateCcw, Sparkles } from "lucide-react";
+import { Heart, Minus, Plus, ShoppingBag, Star, Truck, Shield, RotateCcw, Sparkles, MessageCircle } from "lucide-react";
 import { useStore } from "@/lib/store";
 import { ProductCard } from "@/components/site/ProductCard";
 import { cn } from "@/lib/utils";
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/products/$id")({
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
-  const { addToCart, toggleWishlist, wishlist } = useStore();
+  const { addToCart, toggleWishlist, wishlist, setCheckoutOpen, setCartOpen } = useStore();
   const [qty, setQty] = useState(1);
   const [shade, setShade] = useState(product.shades?.[0]?.name);
   const wished = wishlist.includes(product.id);
@@ -131,6 +131,17 @@ function ProductPage() {
               <Heart className={cn("h-5 w-5", wished && "fill-current")} />
             </button>
           </div>
+
+          <button
+            onClick={() => {
+              addToCart(product, { qty, shade });
+              setCartOpen(false);
+              setCheckoutOpen(true);
+            }}
+            className="mt-3 w-full inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 h-12 text-sm tracking-wider uppercase transition shadow-md shadow-emerald-600/10"
+          >
+            <MessageCircle className="h-4 w-4" /> Commander rapidement via WhatsApp
+          </button>
 
           <div className="mt-8 grid grid-cols-2 gap-3 border-t border-border pt-6">
             {[

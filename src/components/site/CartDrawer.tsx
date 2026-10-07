@@ -4,7 +4,7 @@ import { Minus, Plus, X, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function CartDrawer() {
-  const { cart, cartOpen, setCartOpen, removeFromCart, updateQty, cartTotal } = useStore();
+  const { cart, cartOpen, setCartOpen, setCheckoutOpen, removeFromCart, updateQty, cartTotal } = useStore();
   const shipping = cartTotal >= 200 || cartTotal === 0 ? 0 : 80;
 
   return (
@@ -71,7 +71,15 @@ export function CartDrawer() {
                 <span className="font-display">Total</span>
                 <span className="font-semibold">{(cartTotal + shipping).toFixed(2)} MAD</span>
               </div>
-              <Button className="w-full h-12 rounded-full text-sm tracking-widest uppercase">Passer commande</Button>
+              <Button
+                onClick={() => {
+                  setCartOpen(false);
+                  setCheckoutOpen(true);
+                }}
+                className="w-full h-12 rounded-full text-sm tracking-widest uppercase"
+              >
+                Passer commande
+              </Button>
               <button onClick={() => setCartOpen(false)} className="w-full text-xs text-muted-foreground hover:text-foreground">
                 Continuer mes achats
               </button>

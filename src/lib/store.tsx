@@ -8,9 +8,12 @@ type StoreState = {
   wishlist: string[];
   cartOpen: boolean;
   setCartOpen: (v: boolean) => void;
+  checkoutOpen: boolean;
+  setCheckoutOpen: (v: boolean) => void;
   addToCart: (p: Product, opts?: { qty?: number; shade?: string }) => void;
   removeFromCart: (id: string) => void;
   updateQty: (id: string, qty: number) => void;
+  clearCart: () => void;
   toggleWishlist: (id: string) => void;
   cartCount: number;
   cartTotal: number;
@@ -22,6 +25,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -46,6 +50,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     wishlist,
     cartOpen,
     setCartOpen,
+    checkoutOpen,
+    setCheckoutOpen,
     addToCart: (p, opts) => {
       setCart((c) => {
         const existing = c.find((i) => i.product.id === p.id && i.shade === opts?.shade);
@@ -58,10 +64,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     },
     removeFromCart: (id) => setCart((c) => c.filter((i) => i.product.id !== id)),
     updateQty: (id, qty) => setCart((c) => c.map((i) => i.product.id === id ? { ...i, qty: Math.max(1, qty) } : i)),
+    clearCart: () => setCart([]),
     toggleWishlist: (id) => setWishlist((w) => w.includes(id) ? w.filter((x) => x !== id) : [...w, id]),
     cartCount: cart.reduce((n, i) => n + i.qty, 0),
     cartTotal: cart.reduce((n, i) => n + i.qty * i.product.price, 0),
-  }), [cart, wishlist, cartOpen]);
+  }), [cart, wishlist, cartOpen, checkoutOpen]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

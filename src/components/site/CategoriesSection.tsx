@@ -4,7 +4,7 @@ import { categories } from "@/lib/products";
 
 export function CategoriesSection() {
   return (
-    <section className="container-tivana py-20 lg:py-28">
+    <section className="container-tivana pt-14 lg:pt-20 pb-6 lg:pb-8">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-primary/70">Parcourir par catégorie</p>
