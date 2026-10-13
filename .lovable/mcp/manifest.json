@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "sdk_version": "3.0.5",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "tivana-beauty-hub",
+      "version": "0.1.0",
+      "title": "Tivana Beauty Hub"
+    },
+    "tools": [
+      {
+        "name": "list_products",
+        "title": "Lister les produits",
+        "description": "Liste les produits Tivana (nom, prix en MAD, catégorie), filtrables par catégorie ou mot-clé.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Catégorie, ex : cheveux, visage, intime, complements, coffrets.",
+              "type": "string"
+            },
+            "query": {
+              "description": "Mot-clé à rechercher dans le nom ou la description.",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_product",
+        "title": "Détails d'un produit",
+        "description": "Renvoie la fiche complète d'un produit Tivana à partir de son identifiant.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Identifiant du produit, ex : shampoing-soin."
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

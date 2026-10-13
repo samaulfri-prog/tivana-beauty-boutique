@@ -2,20 +2,10 @@ import { ProductCard } from "./ProductCard";
 import { products } from "@/lib/products";
 import { Link } from "@tanstack/react-router";
 
-export function FeaturedProducts({
-  title,
-  eyebrow,
-  list,
-  className = "py-12 lg:py-16",
-}: {
-  title: string;
-  eyebrow: string;
-  list?: typeof products;
-  className?: string;
-}) {
+export function FeaturedProducts({ title, eyebrow, list }: { title: string; eyebrow: string; list?: typeof products }) {
   const items = list ?? products;
   return (
-    <section className={`container-tivana ${className}`}>
+    <section className="container-tivana py-20 lg:py-24">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-primary/70">{eyebrow}</p>
